@@ -307,6 +307,14 @@ Piwik is now Matomo. Read more about this change in the [official announcement](
 * Added new event `MultiSites.filterRowsForTotalsCalculation` to filter which sites will be included in the All Websites Dashboard totals calculation.
 * The method `Piwik\Plugin\Archiver::shouldRunEvenWhenNoVisits()` has been added. By overwriting this method and returning true, a plugin archiver can force the archiving to run even when there was no visit for the website/date/period/segment combination (by default, archivers are skipped when there is no visit).
 
+## Piwik 4.0.0
+
+
+### Breaking Changes
+
+* Reporting API: `showColumns` will now apply recursively and remove all columns in the result that are not found in this list, and will apply to all nested datasets. 
+* Reporting API: `hideColumns` will now apply recursively and removes those columns from the result, including any columns found in nested datasets. 
+
 ## Piwik 3.0.0
 
 ### New guide
